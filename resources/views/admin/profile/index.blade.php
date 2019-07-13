@@ -28,13 +28,10 @@
                                     <td>{{ str_limit($profile->gender, 100) }}</td>
                                     <td>{{ str_limit($profile->hobby, 250) }}</td>
                                     <td>{{ str_limit($profile->introduction, 250) }}</td>
+                                    <td><a href="{{ action('Admin\ProfileController@edit', ['id' => $profile->id]) }}" class="btn btn-primary">編集</a></td>
                                 </tr>
-                                <div>
-                                    
-                                <div>
-                                    <a href="{{ action('Admin\ProfileController@edit', ['id' => $profile->id]) }}">編集</a>
-                                </div>
-                              
+                                
+                         
 
                             @endforeach
                         </tbody>
